@@ -1,4 +1,8 @@
 # react-service-utils
+
+[![Build Status][travis-image]][travis-url]
+[![Coverage Status][coveralls-image]][coveralls-url]
+
 A group of utility functions that converts XHR response (from superagent) into a standard response object. The design to from a simple inteface for Promise or async/await based services with support for various REST data (paging, flash, validation, etc) supplied through headers.
 
 Simply import this module and use the createResult method to convert a superagent response into a uniform response that action creators can handle:
@@ -110,5 +114,12 @@ Creates a response object that can be used in action creators that conform to th
   validationErrors,
   error
 }
-
+```
 The result property is the body with paging information attached.
+
+
+
+[travis-image]: https://travis-ci.org/bmancini55/react-service-utils.svg?branch=master
+[travis-url]: https://travis-ci.org/bmancini55/react-service-utils
+[coveralls-image]: https://coveralls.io/repos/github/bmancini55/react-service-utils/badge.svg?branch=master
+[coveralls-url]: https://coveralls.io/github/bmancini55/react-service-utils?branch=master
