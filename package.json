@@ -1,0 +1,27 @@
+{
+  "name": "react-service-utils",
+  "version": "1.0.0",
+  "description": "React service utilies to create uniform responses for Flux or Redux",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha",
+    "test:ci": "istanbul cover node_modules/.bin/_mocha --report lcovonly"
+  },
+  "keywords": [
+    "react",
+    "flux",
+    "redux",
+    "service",
+    "xhr",
+    "ajax"
+  ],
+  "author": "Brian Mancini <bmancini@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "chai": "^3.5.0",
+    "eslint": "^3.0.1",
+    "istanbul": "^0.4.4",
+    "mocha": "^2.5.3"
+  }
+}
