@@ -1,9 +1,11 @@
 {
   "name": "react-service-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React service utilies to create uniform responses for Flux or Redux",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "babel lib --out-dir dist",
+    "prepublish": "npm run build",
     "test": "mocha",
     "test:ci": "istanbul cover node_modules/.bin/_mocha --report lcovonly"
   },
@@ -18,10 +20,19 @@
   "author": "Brian Mancini <bmancini@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "babel-cli": "^6.10.1",
     "babel-eslint": "^6.1.2",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0",
     "chai": "^3.5.0",
     "eslint": "^3.0.1",
     "istanbul": "^0.4.4",
     "mocha": "^2.5.3"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0"
+    ]
   }
 }
