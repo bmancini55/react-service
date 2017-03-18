@@ -19,6 +19,18 @@ describe('react-service-utils', () => {
         let result   = utils.createResult(error, response);
         expect(result.error).to.equal('Boom');
       });
+      it('should handle no response', () => {
+        let error    = 'Timeout';
+        let response = undefined;
+        let result   = utils.createResult(error, response);
+        expect(result.error).to.equal('Timeout');
+      });
+      it('should generate an errorMessage', () => {
+        let error    = new Error('Internal Server Error');
+        let response = undefined;
+        let result   = utils.createResult(error, response);
+        expect(result.errorMessage).to.equal('Internal Server Error');
+      });
     });
     describe('when no error', () => {
       let response;
